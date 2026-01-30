@@ -21,11 +21,21 @@ let September = 30;
 let October = 31;
 let November = 30;
 let December = 31; 
+let Year = 365;
 
+findLeaps()
 function findLeaps(){
     for(let i = 1901; i <= 2000; i++ ){
         if(i % 4 == 0 || i % 400 == 0){
             console.log(i)
+            February = 29;
+            Year = 366;
         }
+    }
+}
+
+function countSundays(){
+    for(let i = 1901; i <= 2000; i++ ){
+
     }
 }

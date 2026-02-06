@@ -39,3 +39,4 @@ function countSundays(){
 
     }
 }
+// I need to try to finish the count sundays, but i have to figure out how to take into count the leap years when counting.

@@ -36,7 +36,9 @@ function findLeaps(){
 
 function countSundays(){
     for(let i = 1901; i <= 2000; i++ ){
-
+        if( Year == 365 || February == 28){
+            for(let i = 1; i <= 28; i++)
+        }
     }
 }
 // I need to try to finish the count sundays, but i have to figure out how to take into count the leap years when counting.

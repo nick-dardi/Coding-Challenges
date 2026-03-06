@@ -9,36 +9,26 @@
 // And on leap years, twenty-nine.
 // A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
 // How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
-let January = 31; 
-let February = 28;
-let March = 31;
-let April = 30;
-let May = 31;
-let June = 30;
-let July = 31;
-let August = 31;
-let September = 30;
-let October = 31;
-let November = 30;
-let December = 31; 
-let Year = 365;
+let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+let currentDayofWeek = 0;
+let sundays = 0;
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 findLeaps()
 function findLeaps(){
     for(let i = 1901; i <= 2000; i++ ){
-        if(i % 4 == 0 || i % 400 == 0){
-            console.log(i)
-            February = 29;
-            Year = 366;
+        if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+            months[1] = 29;
+            console.log("leap year: " + i);
+        } else {
+            months[1] = 28;
+        }
+        for (let monthIndex = 0; monthIndex < months.length; monthIndex++){
+            if(days[currentDayofWeek] == "Sunday"){
+                sundays++;
+            }
+            currentDayofWeek = (currentDayofWeek + months[monthIndex]) % 7;
         }
     }
 }
-
-function countSundays(){
-    for(let i = 1901; i <= 2000; i++ ){
-        if( Year == 365 || February == 28){
-            for(let i = 1; i <= 28; i++)
-        }
-    }
-}
-// I need to try to finish the count sundays, but i have to figure out how to take into count the leap years when counting.
+console.log(sundays);

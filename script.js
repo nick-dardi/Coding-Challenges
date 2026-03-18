@@ -32,6 +32,8 @@ function findLeaps(){
     }
 }
 console.log(sundays);
+Swal.fire("SweetAlert2 is working!");
+
 // I got 172 which is incorrect
 // I need to check the dayofweek and days logic to make sure that they are correscponding with eachother with the right day.
 // This was my first attempt at the counting sundays portion of the code and I think I will try a different method of counting the days and checking for sundays without using modlus. 

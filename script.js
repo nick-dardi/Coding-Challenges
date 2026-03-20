@@ -39,3 +39,6 @@ console.log(sundays);
 // I got 172 which is incorrect
 // I need to check the dayofweek and days logic to make sure that they are correscponding with eachother with the right day.
 // This was my first attempt at the counting sundays portion of the code and I think I will try a different method of counting the days and checking for sundays without using modlus. 
+// This week I added a library into my code. I used sweet alert to display the answer in a pop up instead of the console. I will continue to debug my code and try to find the error in my logic.
+// I will start to break down my code and separate it to allow for easier error checking and debugging. I will also add more console logs to check the values of the variables at different points in the code to see where the error is occurring. 
+// I will also try to find a different method of counting the days and checking for sundays without using modulus to see if that helps me find the error.

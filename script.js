@@ -31,8 +31,10 @@ function findLeaps(){
         }
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+     Swal.fire("The number of Sundays that fell on the first of the month during the twentieth century is: " + sundays);
+});
 console.log(sundays);
-Swal.fire("SweetAlert2 is working!");
 
 // I got 172 which is incorrect
 // I need to check the dayofweek and days logic to make sure that they are correscponding with eachother with the right day.

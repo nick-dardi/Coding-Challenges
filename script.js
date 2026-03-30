@@ -13,7 +13,7 @@ let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 let currentDayofWeek = 0;
 let sundays = 0;
 let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-let startingYear = 1901;
+let startingYear = parseInt(document.getElementById("inputField").value);
 
 findLeaps()
 function findLeaps(){

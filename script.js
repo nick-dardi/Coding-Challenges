@@ -13,24 +13,28 @@ let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 let currentDayofWeek = 0;
 let sundays = 0;
 let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+let startingYear = 1901;
 
 findLeaps()
 function findLeaps(){
-    for(let i = 1901; i <= 2000; i++ ){
+    for(let i = startingYear; i <= 2000; i++ ){
         if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
             months[1] = 29;
             console.log("leap year: " + i);
         } else {
             months[1] = 28;
         }
-        for (let monthIndex = 0; monthIndex < months.length; monthIndex++){
-            if(days[currentDayofWeek] == "Sunday"){
-                sundays++;
-            }
-            currentDayofWeek = (currentDayofWeek + months[monthIndex]) % 7;
-        }
     }
 }
+function countSundays(){
+    for (let monthIndex = 0; monthIndex < months.length; monthIndex++){
+        if(days[currentDayofWeek] == "Sunday"){
+                sundays++;
+        }
+        currentDayofWeek = (currentDayofWeek + months[monthIndex]) % 7;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
      Swal.fire("The number of Sundays that fell on the first of the month during the twentieth century is: " + sundays);
 });
